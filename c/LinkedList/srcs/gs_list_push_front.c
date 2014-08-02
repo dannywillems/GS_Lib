@@ -1,7 +1,5 @@
 #include "gs_list.h"
 
-t_list		*gs_create_elem(void *data);
-
 void		gs_list_push_front(t_list **begin_list, void *data)
 {
 	t_list *tmp;
