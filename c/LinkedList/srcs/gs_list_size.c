@@ -2,16 +2,8 @@
 
 int		gs_list_size(t_list *begin_list)
 {
-	int i;
-
-	i = 0;
 	if (begin_list)
-	{
-		while (begin_list)
-		{
-			begin_list = begin_list->next;
-			i++;
-		}
-	}
-	return (i);
+		return (gs_list_size(begin_list->next) + 1);
+	else
+		return (0);
 }
