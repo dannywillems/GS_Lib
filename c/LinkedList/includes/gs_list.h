@@ -21,5 +21,6 @@ void		gs_list_reverse_fun(t_list *begin_list);
 void		gs_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)());
 void		gs_list_push_front(t_list **begin_list, void *data);
 void		gs_list_push_back(t_list **begin_list, void *data);
+t_list		*gs_list_at(t_list *begin_list, unsigned int nbr);
 
 #endif
