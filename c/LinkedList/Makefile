@@ -9,7 +9,7 @@ SRC 	=	$(SRC_DIR)/gs_create_elem.c $(SRC_DIR)/gs_list_clear.c \
 			$(SRC_DIR)/gs_list_find.c $(SRC_DIR)/gs_list_last.c \
 			$(SRC_DIR)/gs_list_merge.c $(SRC_DIR)/gs_list_push_back.c \
 			$(SRC_DIR)/gs_list_push_front.c $(SRC_DIR)/gs_list_remove_if.c \
-			$(SRC_DIR)/gs_list_reverse_fun.c $(SRC_DIR)/gs_list_size.c \
+			$(SRC_DIR)/gs_list_reverse.c $(SRC_DIR)/gs_list_size.c \
 			$(SRC_DIR)/gs_list_sort.c
 OBJ		=	$(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
 
