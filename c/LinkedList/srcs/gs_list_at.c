@@ -1,4 +1,5 @@
 #include "gs_list.h"
+#include "gs_prototypes.h"
 
 t_list		*gs_list_at(t_list *begin_list, unsigned int nbr)
 {

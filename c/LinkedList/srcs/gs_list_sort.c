@@ -1,4 +1,5 @@
 #include "gs_list.h"
+#include "gs_prototypes.h"
 
 void	gs_list_sort(t_list **list, int (*cmp)())
 {

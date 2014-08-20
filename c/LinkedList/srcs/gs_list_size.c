@@ -1,4 +1,5 @@
 #include "gs_list.h"
+#include "gs_prototypes.h"
 
 int		gs_list_size(t_list *begin_list)
 {

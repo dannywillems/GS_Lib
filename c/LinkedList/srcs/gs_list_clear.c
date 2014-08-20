@@ -1,4 +1,5 @@
 #include "gs_list.h"
+#include "gs_prototypes.h"
 
 void		gs_list_clear(t_list **begin_list)
 {

@@ -1,6 +1,7 @@
 #include "gs_list.h"
+#include "gs_prototypes.h"
 
-t_list		*gs_create_elem(void *data)
+t_list		*gs_create_list(void *data)
 {
 	t_list *list;
 

@@ -1,4 +1,5 @@
 #include "gs_list.h"
+#include "gs_prototypes.h"
 
 void	gs_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 {

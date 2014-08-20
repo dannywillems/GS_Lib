@@ -1,4 +1,5 @@
 #include "gs_list.h"
+#include "gs_prototypes.h"
 
 void		gs_list_push_front(t_list **begin_list, void *data)
 {
@@ -6,10 +7,10 @@ void		gs_list_push_front(t_list **begin_list, void *data)
 
 	if (*begin_list)
 	{
-		tmp = gs_create_elem(data);
+		tmp = gs_create_list(data);
 		tmp->next = *begin_list;
 		*begin_list = tmp;
 	}
 	else
-		*begin_list = gs_create_elem(data);
+		*begin_list = gs_create_list(data);
 }

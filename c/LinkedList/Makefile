@@ -5,7 +5,7 @@ SRC_DIR =	srcs
 OBJ_DIR =	objs
 INC		=	includes
 
-SRC 	=	$(SRC_DIR)/gs_create_elem.c $(SRC_DIR)/gs_list_clear.c \
+SRC 	=	$(SRC_DIR)/gs_create_list.c $(SRC_DIR)/gs_list_clear.c \
 			$(SRC_DIR)/gs_list_find.c $(SRC_DIR)/gs_list_last.c \
 			$(SRC_DIR)/gs_list_merge.c $(SRC_DIR)/gs_list_push_back.c \
 			$(SRC_DIR)/gs_list_push_front.c $(SRC_DIR)/gs_list_remove_if.c \
