@@ -10,7 +10,7 @@
 t_btree		*gs_create_btree(void *data);
 int			gs_btree_height(t_btree *root);
 t_bool		gs_btree_is_full(t_btree *root);
-int			gs_btree_nb_node(t_btree *root);
+int			gs_btree_size(t_btree *root);
 void		gs_btree_applyf_prefix(t_btree *root, void (*f)(void *));
 void		gs_btree_applyf_infix(t_btree *root, void (*f)(void *));
 void		gs_btree_applyf_suffix(t_btree *root, void (*f)(void *));

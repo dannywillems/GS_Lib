@@ -7,7 +7,7 @@ OBJ_DIR =	objs
 INC		=	includes
 
 SRC =	$(SRC_DIR)/gs_create_btree.c $(SRC_DIR)/gs_btree_is_full.c \
-		$(SRC_DIR)/gs_btree_height.c $(SRC_DIR)/gs_btree_nb_node.c \
+		$(SRC_DIR)/gs_btree_height.c $(SRC_DIR)/gs_btree_size.c \
 		$(SRC_DIR)/gs_btree_apply_prefix.c $(SRC_DIR)/gs_btree_apply_infix.c \
 		$(SRC_DIR)/gs_btree_apply_suffix.c $(SRC_DIR)/gs_list_push_back.c \
 		$(SRC_DIR)/gs_btree_nsearch_prefix.c $(SRC_DIR)/gs_create_list.c \
