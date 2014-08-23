@@ -1,7 +1,7 @@
 #include "gs_btree.h"
 #include "gs_prototypes.h"
 
-t_btree *gs_create_btree(void *data)
+t_btree *gs_btree_create(void *data)
 {
 	t_btree *bt;
 

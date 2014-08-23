@@ -1,11 +1,11 @@
 #include "gs_btree.h"
 #include "gs_prototypes.h"
 
-t_list		*gs_create_list(t_btree *node)
+t_slist		*gs_slist_create(t_btree *node)
 {
-	t_list *list;
+	t_slist *list;
 
-	list = (t_list *)malloc(sizeof(t_list));
+	list = (t_slist *)malloc(sizeof(t_slist));
 	if (list)
 	{
 		list->node = node;
