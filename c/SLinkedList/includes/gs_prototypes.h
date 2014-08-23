@@ -17,5 +17,7 @@ void	gs_slist_remove_if(t_slist **begin_list, void *data_ref, int (*cmp)());
 void	gs_slist_push_front(t_slist **begin_list, void *data);
 void	gs_slist_push_back(t_slist **begin_list, void *data);
 t_slist	*gs_slist_at(t_slist *begin_list, unsigned int nbr);
+t_slist *gs_slist_find_max(t_slist *list, int (*cmp)(void *, void *));
+t_slist *gs_slist_find_min(t_slist *list, int (*cmp)(void *, void *));
 
 #endif
