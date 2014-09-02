@@ -20,4 +20,6 @@ t_slist	*gs_slist_at(t_slist *begin_list, unsigned int nbr);
 t_slist *gs_slist_find_max(t_slist *list, int (*cmp)(void *, void *));
 t_slist *gs_slist_find_min(t_slist *list, int (*cmp)(void *, void *));
 
+void	gs_slist_del(t_slist **begin_list);
+
 #endif
