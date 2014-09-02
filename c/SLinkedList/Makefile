@@ -7,13 +7,7 @@ SRC_DIR =	srcs
 OBJ_DIR =	objs
 INC		=	includes
 
-SRC 	=	$(SRC_DIR)/gs_slist_create.c $(SRC_DIR)/gs_slist_clear.c \
-			$(SRC_DIR)/gs_slist_find.c $(SRC_DIR)/gs_slist_last.c \
-			$(SRC_DIR)/gs_slist_merge.c $(SRC_DIR)/gs_slist_push_back.c \
-			$(SRC_DIR)/gs_slist_push_front.c $(SRC_DIR)/gs_slist_remove_if.c \
-			$(SRC_DIR)/gs_slist_reverse.c $(SRC_DIR)/gs_slist_size.c \
-			$(SRC_DIR)/gs_slist_sort.c $(SRC_DIR)/gs_slist_find_max.c \
-			$(SRC_DIR)/gs_slist_find_min.c
+SRC 	=	$(wildcard $(SRC_DIR)/*.c)
 OBJ		=	$(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
 
 dynamic: fPIC = -fPIC
