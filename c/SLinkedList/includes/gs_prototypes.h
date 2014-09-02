@@ -2,6 +2,7 @@
 # define GS_PROTOTYPES_H
 
 # include "gs_slist.h"
+# include "gs_typedef.h"
 
 # include <stdlib.h>
 
@@ -16,10 +17,11 @@ void	gs_slist_reverse_fun(t_slist *begin_list);
 void	gs_slist_remove_if(t_slist **begin_list, void *data_ref, int (*cmp)());
 void	gs_slist_push_front(t_slist **begin_list, void *data);
 void	gs_slist_push_back(t_slist **begin_list, void *data);
-t_slist	*gs_slist_at(t_slist *begin_list, unsigned int nbr);
+t_slist	*gs_slist_at(t_slist *begin_list, pos_t i);
 t_slist *gs_slist_find_max(t_slist *list, int (*cmp)(void *, void *));
 t_slist *gs_slist_find_min(t_slist *list, int (*cmp)(void *, void *));
 
-void	gs_slist_del(t_slist **begin_list);
+void	*gs_slist_del(t_slist **begin_list);
+void	*gs_slist_del_at(t_slist **begin_list, pos_t i);
 
 #endif
