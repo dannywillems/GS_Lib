@@ -1,7 +1,7 @@
 #include "gs_slist.h"
 #include "gs_prototypes.h"
 
-void	gs_slist_reverse(t_slist *begin_list)
+t_slist		*gs_slist_reverse(t_slist *begin_list)
 {
 	t_slist *previous;
 	t_slist *tmp;
@@ -14,4 +14,5 @@ void	gs_slist_reverse(t_slist *begin_list)
 		previous = begin_list;
 		begin_list = tmp;
 	}
+	return (previous);
 }
