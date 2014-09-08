@@ -10,10 +10,10 @@ static t_snode	*_gs_snode_at(t_snode *node, pos_t i)
 		return (_gs_snode_at(node->next, i - 1));
 }
 
-t_snode		*gs_slist_at(t_slist *begin_list, pos_t i)
+t_snode		*gs_slist_at(t_slist *list, pos_t i)
 {
-	if (i < begin_list->size)
-		return (_gs_snode_at(begin_list->head, i));
+	if (i < list->size)
+		return (_gs_snode_at(list->head, i));
 	else
 		return (NULL);
 }
