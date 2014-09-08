@@ -13,7 +13,7 @@ For example :
 		list.push_back("World")
 		list.sort()
 	C:
-		list = gs_slist_create()
+		t_slist *list = gs_slist_create()
 		gs_slist_push_front(list, "hello")
 		gs_slist_push_data(list, "World")
 		gs_slist_sort(list, &strcmp);
