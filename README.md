@@ -1,15 +1,19 @@
-Programming
+GS_Lib
 ===========
 
-Repositories containing some personnal library in different languages, some personnal code.
+GS_Lib provides a library, essentially for data structures, in different languages.
+The GS_Lib main feature, and advantage is all methods, all data structures definitions are the same in each languages.
+(NB : In some no-OO languages, data structures methods begin with the data structures name)
 
-C:
-	LinkedList:
-		Implementation of Linked List data structure with some functions. See C_LINKEDLIST.md (not yet) for more informations.
+For example :
 
-Python:
-	BinaryTree:
-		Implementation of Binary Tree data structure with some functions. See PY_BINARYTREE.md (not yet) for more informations.
-	BinarySearchTree:
-		Implementation of Binary Search Tree data structure with some functions. See PY_BINARYSEARCHTREE.md (not yet) for more informations.
-		Need BinarySearch.py
+	Python:
+		list = GS_SList()
+		list.push_front("hello")
+		list.push_back("World")
+		list.sort()
+	C:
+		list = gs_slist_create()
+		gs_slist_push_front(list, "hello")
+		gs_slist_push_data(list, "World")
+		gs_slist_sort(list, &strcmp);
