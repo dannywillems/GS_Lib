@@ -1,4 +1,4 @@
-NAME = libslist.a
+NAME = libdlist.a
 
 FLAGS	=	-Wall -Wextra -Werror
 fPIC	=
