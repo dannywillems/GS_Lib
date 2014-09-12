@@ -19,11 +19,5 @@ size_t		gs_btree_size(t_btree *tree);
 void		gs_btree_applyf_prefix(t_btree *tree, void (*f)(void *));
 void		gs_btree_applyf_infix(t_btree *tree, void (*f)(void *));
 void		gs_btree_applyf_suffix(t_btree *tree, void (*f)(void *));
-//int			gs_btree_nsearch_prefix(	t_btree *tree, t_slist **t, int n,
-//										void *data, int (*cmp)(void *, void *));
-//int			gs_btree_nsearch_infix(		t_btree *tree, t_slist **t, int n,
-//										void *data, int (*cmp)(void *, void *));
-//int			gs_btree_nsearch_sufffix(	t_btree *tree, t_slist **t, int n,
-//										void *data, int (*cmp)(void *, void *));
 
 #endif
