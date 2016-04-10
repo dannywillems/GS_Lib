@@ -31,18 +31,18 @@ module Alignment :
                       ?f:(nucleotide -> nucleotide -> int)  ->
                       sequence            ->
                       sequence            ->
-                      int
+                      sequence
 
     val local       : ?gap:int            ->
                       ?f:(nucleotide -> nucleotide -> int)  ->
                       sequence            ->
                       sequence            ->
-                      int
+                      sequence
 
     val semi_global : ?gap:int            ->
                       ?f:(nucleotide -> nucleotide -> int)  ->
                       sequence            ->
                       sequence            ->
-                      int
+                      sequence
 
   end

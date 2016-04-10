@@ -48,20 +48,17 @@ let to_str s =
 
 module Alignment =
   struct (*$< Alignment *)
+    type type_comp =
+      | Local
+      | Global
+
     let default_f x y = match (x, y) with
       | (Gap, x)          -> -2
       | (x, Gap)          -> -2
       | (a, b) when a = b -> 1
       | _                 -> -1
 
-    (*$T &
-     Alignment.similarity (of_str "GA-CGGATTAG") (of_str "GATCGGAATAG") = 6
-     Alignment.similarity (of_str "CAGCA-CTTGGATTCTCGG") (of_str \
-     "---CAGCGTGG--------") = -19
-     Alignment.similarity (of_str "CAGCACTTGGATTCTCGG") (of_str \
-     "CAGC-----G-T----GG") = -12
-    *)
-    let similarity ?gap:(gap=(-2)) ?f:(f=default_f) s t =
+    let array_similarity ?gap:(gap=(-2)) ?f:(f=default_f) type_comp s t =
       let m = length s in
       let n = length t in
       let a = Array.make_matrix (m + 1) (n + 1) 0 in
@@ -76,15 +73,30 @@ module Alignment =
           let tmp = max
             (a.(i - 1).(j - 1) + (f (get s (i - 1)) (get t (j - 1))))
             (a.(i).(j - 1) + gap)
-          in a.(i).(j) <- max (a.(i - 1).(j) + gap) tmp;
+          in
+          a.(i).(j) <- (match type_comp with
+          | Global -> max (a.(i - 1).(j) + gap) tmp
+          | Local -> max (a.(i - 1).(j) + gap) (max tmp 0))
         done;
       done;
-      a.(m).(n)
+    a
+
+    (*$T &
+     Alignment.similarity (of_str "GA-CGGATTAG") (of_str "GATCGGAATAG") = 6
+     Alignment.similarity (of_str "CAGCA-CTTGGATTCTCGG") (of_str \
+     "---CAGCGTGG--------") = -19
+     Alignment.similarity (of_str "CAGCACTTGGATTCTCGG") (of_str \
+     "CAGC-----G-T----GG") = -12
+    *)
+    let similarity ?gap:(gap=(-2)) ?f:(f=default_f) s t =
+      let m = length s and n = length t and a = array_similarity Global s t in a.(m).(n)
 
     (* TODO *)
-    let global ?gap:(gap=(-2)) ?f:(f=default_f)  s t = 42
+    let global ?gap:(gap=(-2)) ?f:(f=default_f)  s t = init 2
+
     (* TODO *)
-    let local ?gap:(gap=(-2)) ?f:(f=default_f) s t = 42
+    let local ?gap:(gap=(-2)) ?f:(f=default_f) s t = init 2
+
     (* TODO *)
-    let semi_global ?gap:(gap=(-2)) ?f:(f=default_f) s t = 42
+    let semi_global ?gap:(gap=(-2)) ?f:(f=default_f) s t = init 2
   end (*$>*)
